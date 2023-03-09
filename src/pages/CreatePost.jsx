@@ -20,6 +20,8 @@ const App = () => {
 
   const handleSurpriseMe = () => {};
 
+  const generateImage = () => {};
+
   return (
     <section className="max-w-7xl mx-auto">
       <div>
@@ -69,6 +71,26 @@ const App = () => {
               </div>
             )}
           </div>
+        </div>
+        <div className="mt-5 flex gap-5">
+          <button
+            type="button"
+            onClick={generateImage}
+            className="text-white bg-green-700 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+          >
+            {generatingImg ? "Generating" : "Generate"}
+          </button>
+        </div>
+        <div className="mt-10">
+          <p className="mt-2 text-[#666e75] text-[14px]">
+            Share your masterpiece
+          </p>
+          <button
+            type="submit"
+            className="mt-3 text-white bg-[#6469ff] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+          >
+            {loading ? "Sharing" : "Share with the world!"}
+          </button>
         </div>
       </form>
     </section>
